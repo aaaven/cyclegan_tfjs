@@ -18,9 +18,18 @@ conda env create -f environment.yml
 ```
 - Check and Activate Environment
 ```bash
-source activate cyclegan_tf
+source activate cyclegan_tf1
 ```
 - Download Dataset
 ```bash
 sh ./download_dataset.sh monet2photo
+```
+## Log in log-in-node and Start the training
+- Log in log-in-node with a new termial window
+```bash
+ssh colfax
+```
+- Use qsub command to summit the training task
+```bash
+qsub train_cyclegan_tf
 ```
