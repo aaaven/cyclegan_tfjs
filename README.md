@@ -6,13 +6,21 @@ ssh colfax
 ## Gitclone
 TODO:
 
-## Create conda environment
-
-
-## 1. Download Datasets
-- Download the monet2photo dataset:
+## Log in Compute Node and Setup Environment
+- Log in Compute Node
+```bash
+qsub -l walltime=24:00:00 -I
+```
+- Set up environment with conda and environment.yml:
+```bash
+cd cyclegan_tf
+conda env create -f environment.yml
+```
+- Check and Activate Environment
+```bash
+source activate cyclegan_tf
+```
+- Download Dataset
 ```bash
 sh ./download_dataset.sh monet2photo
 ```
-
-# 
