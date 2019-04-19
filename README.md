@@ -6,7 +6,7 @@ git clone https://github.com/caohuiyan/cyclegan_tfjs
 
 # 2. Train on Intel AI DevCloud
 
-## 2.1 Upload training cdoe
+## 2.1 Upload training code
 ```
 scp -r ~/cyclegan_tfjs/train colfax:/~/
 ```
