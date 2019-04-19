@@ -2,6 +2,7 @@
 ```
 cd ~
 git clone https://github.com/caohuiyan/cyclegan_tfjs
+chmod 777 -R cyclegan_tfjs
 ```
 
 # 2. Train on Intel AI DevCloud
