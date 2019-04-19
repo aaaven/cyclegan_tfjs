@@ -42,6 +42,7 @@ exit
 
 ## 2.5 Submit training job
 ```bash
+cd train
 qsub train_cyclegan_tf
 ```
 The training will take more than 48 hours, please do following steps after the training finishes (200 epoches by default).
