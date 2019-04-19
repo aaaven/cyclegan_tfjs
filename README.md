@@ -11,12 +11,12 @@ git clone https://github.com/caohuiyan/cyclegan_tfjs
 scp -r ~/cyclegan_tfjs/train colfax:/~/
 ```
 
-## 1. Login Intel AI DevCloud
+## - Login Intel AI DevCloud
 ```
 ssh colfax
 ```
 
-## Log in Compute Node and Setup Environment
+## - Log in Compute Node and Setup Environment
 - Log in Compute Node
 ```bash
 qsub -l walltime=24:00:00 -I
@@ -44,8 +44,11 @@ ssh colfax
 qsub train_cyclegan_tf
 ```
 
-## Download checkponts from DevCloud
+## Download checkpoints from DevCloud
 Execute following command on your own laptop
 ```
-scp 
+scp -r colfax:/~/train/outputs ~/cyclegan_tfjs/train
 ```
+
+# Inference
+
