@@ -53,9 +53,10 @@ scp -r colfax:/~/train/outputs ~/cyclegan_tfjs/train
 
 # 3. Inference
 
-## 3.1 Install and Setup OpenVINO environment
-- Download: https://software.intel.com/en-us/openvino-toolkit/choose-download
-- Install: https://software.intel.com/en-us/openvino-toolkit/documentation/get-started
+## 3.1 Install tensorflowjs
+```
+pip install tensorflowjs==0.8.0
+```
 
 ## 3.2 Convert models
 ```
