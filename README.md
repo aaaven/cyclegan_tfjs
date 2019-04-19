@@ -2,7 +2,7 @@
 
 ## Gitclone
 ```
-ghttps://github.com/caohuiyan/cyclegan_tfjs.git
+git clone https://github.com/caohuiyan/cyclegan_tfjs
 ```
 
 ## 1. Login Intel AI DevCloud
