@@ -4,7 +4,7 @@ cd ~
 git clone https://github.com/caohuiyan/cyclegan_tfjs
 ```
 
-# 2. Train
+# 2. Train on Intel AI DevCloud
 
 ## 2.1 Upload training cdoe
 ```
