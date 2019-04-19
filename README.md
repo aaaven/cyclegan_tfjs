@@ -1,10 +1,12 @@
 # Train
 
+## Gitclone
+```
+
+```
+
 ## 1. Login Intel AI DevCloud
 ssh colfax
-
-## Gitclone
-TODO:
 
 ## Log in Compute Node and Setup Environment
 - Log in Compute Node
