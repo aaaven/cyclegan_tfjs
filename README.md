@@ -35,18 +35,18 @@ source activate cyclegan_tf1
 sh ./download_dataset.sh monet2photo
 ```
 
-## 2.4 Log in log-in-node and Start the training
-- Log in log-in-node with a new termial window
+## 2.4 Exit Compute Node, and back to log-in-node
 ```bash
-ssh colfax
+exit
 ```
-- Use qsub command to summit the training task
+
+## 2.5 Submit training job
 ```bash
 qsub train_cyclegan_tf
 ```
 The training will take more than 48 hours, please do following steps after the training finishes (200 epoches by default).
 
-## 2.5 Download checkpoints from DevCloud
+## 2.6 Download checkpoints from DevCloud
 Execute following command on your own laptop
 ```
 scp -r colfax:/home/uxxxxx/train/outputs ~/cyclegan_tfjs/train
