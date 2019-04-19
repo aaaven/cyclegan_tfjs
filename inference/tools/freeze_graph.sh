@@ -1,3 +1,5 @@
+mkdir outputs
+
 freeze_graph \
     --input_graph=../../train/outputs/checkpoints/monet2photo/cyclegan_tf_monet2photo.pb \
     --input_binary=true \
