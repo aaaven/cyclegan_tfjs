@@ -54,9 +54,9 @@ Also you can check your checkpoint files in train/outputs/checkpoints/monet2phot
 Please do following steps after the training finishes (200 epoches by default).
 
 ## 2.6 Download checkpoints from DevCloud
-Execute following command on your own laptop
+Execute following command in a terminal running on your own laptop, I mean not in the terminal connecting to AI DevCloud.
 ```
-scp -r colfax:/home/uxxxxx/train/outputs ~/cyclegan_tfjs/train
+[myname@myhomecomputer ~] scp -r colfax:/home/uxxxxx/train/outputs ~/cyclegan_tfjs/train
 ```
 
 # 3. Inference
