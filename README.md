@@ -6,7 +6,7 @@ git clone https://github.com/caohuiyan/cyclegan_tfjs
 
 # Train
 
-## Upload training cdoe
+## - Upload training cdoe
 ```
 scp -r ~/cyclegan_tfjs/train colfax:/~/
 ```
@@ -34,7 +34,8 @@ source activate cyclegan_tf1
 ```bash
 sh ./download_dataset.sh monet2photo
 ```
-## Log in log-in-node and Start the training
+
+## - Log in log-in-node and Start the training
 - Log in log-in-node with a new termial window
 ```bash
 ssh colfax
@@ -44,11 +45,33 @@ ssh colfax
 qsub train_cyclegan_tf
 ```
 
-## Download checkpoints from DevCloud
+## - Download checkpoints from DevCloud
 Execute following command on your own laptop
 ```
 scp -r colfax:/~/train/outputs ~/cyclegan_tfjs/train
 ```
 
 # Inference
+
+## - Install and Setup OpenVINO environment
+Download: https://software.intel.com/en-us/openvino-toolkit/choose-download
+Install: https://software.intel.com/en-us/openvino-toolkit/documentation/get-started
+
+## Convert models
+```
+cd ~/cyclegan_tfjs/inference
+sh ./generate_model.sh
+```
+
+## Run inference
+```
+cd ~/cyclegan_tfjs/inference/tfjs
+
+sudo npm install http-server -g
+
+sudo http-server
+
+http://127.0.0.1:8080
+
+```
 
