@@ -43,3 +43,9 @@ ssh colfax
 ```bash
 qsub train_cyclegan_tf
 ```
+
+## Download checkponts from DevCloud
+Execute following command on your own laptop
+```
+scp 
+```
