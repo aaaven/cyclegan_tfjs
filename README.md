@@ -45,7 +45,10 @@ exit
 cd train
 qsub train_cyclegan_tf
 ```
-The training will take more than 48 hours, please do following steps after the training finishes (200 epoches by default).
+The training will take more than 48 hours. The max walltime for training on DevCloud is 24 hours, you will have to resubmit your training job after 24 hours. 
+You can use qstat command to check the status of your training job.
+Also you can check your checkpoint files in train/outputs/checkpoints/monet2photo
+Please do following steps after the training finishes (200 epoches by default).
 
 ## 2.6 Download checkpoints from DevCloud
 Execute following command on your own laptop
