@@ -8,7 +8,7 @@ git clone https://github.com/caohuiyan/cyclegan_tfjs
 
 ## 2.1 Upload training code
 ```
-scp -r ~/cyclegan_tfjs/train colfax:/~/
+scp -r ~/cyclegan_tfjs/train colfax:/home/uxxxxx
 ```
 
 ## 2.2 Login Intel AI DevCloud
@@ -49,7 +49,7 @@ The training will take more than 48 hours, please do following steps after the t
 ## 2.5 Download checkpoints from DevCloud
 Execute following command on your own laptop
 ```
-scp -r colfax:/~/train/outputs ~/cyclegan_tfjs/train
+scp -r colfax:/home/uxxxxx/train/outputs ~/cyclegan_tfjs/train
 ```
 
 # 3. Inference
