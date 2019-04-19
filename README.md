@@ -1,12 +1,20 @@
-# Train
-
-## Gitclone
+# Git Clone
 ```
+cd ~
 git clone https://github.com/caohuiyan/cyclegan_tfjs
 ```
 
+# Train
+
+## Upload training cdoe
+'''
+scp -r ~/cyclegan_tfjs/train colfax:/~/
+'''
+
 ## 1. Login Intel AI DevCloud
+'''
 ssh colfax
+'''
 
 ## Log in Compute Node and Setup Environment
 - Log in Compute Node
