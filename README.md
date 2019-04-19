@@ -16,7 +16,7 @@ scp -r ~/cyclegan_tfjs/train colfax:/home/uxxxxx
 ssh colfax
 ```
 
-## 2.3 Log in Compute Node and Setup Environment
+## 2.3 Login Compute Node and Setup Environment
 - Log in Compute Node
 ```bash
 qsub -l walltime=24:00:00 -I
