@@ -54,8 +54,8 @@ scp -r colfax:/~/train/outputs ~/cyclegan_tfjs/train
 # Inference
 
 ## - Install and Setup OpenVINO environment
-Download: https://software.intel.com/en-us/openvino-toolkit/choose-download
-Install: https://software.intel.com/en-us/openvino-toolkit/documentation/get-started
+### Download: https://software.intel.com/en-us/openvino-toolkit/choose-download
+### Install: https://software.intel.com/en-us/openvino-toolkit/documentation/get-started
 
 ## Convert models
 ```
