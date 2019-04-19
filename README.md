@@ -23,7 +23,7 @@ qsub -l walltime=24:00:00 -I
 ```
 - Set up environment with conda and environment.yml:
 ```bash
-cd cyclegan_tfjs
+cd train
 conda env create -f environment.yml
 ```
 - Check and Activate Environment
