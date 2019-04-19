@@ -44,7 +44,7 @@ ssh colfax
 ```bash
 qsub train_cyclegan_tf
 ```
-The training will take more than 48 hours, please do following steps after the training fishes (200 epoches by default).
+The training will take more than 48 hours, please do following steps after the training finishes (200 epoches by default).
 
 ## 2.5 Download checkpoints from DevCloud
 Execute following command on your own laptop
