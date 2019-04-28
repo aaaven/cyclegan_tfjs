@@ -1,3 +1,4 @@
+# aven
 from __future__ import absolute_import, division, print_function
 
 import argparse
@@ -39,8 +40,10 @@ with tf.Session() as sess:
     # retore
     try:
         ckpt_path = utils.load_checkpoint('./outputs/checkpoints/' + dataset, sess)
-        tf.train.write_graph(sess.graph_def, './outputs/checkpoints/' + dataset, 'cyclegan_tf_monet2photo.pb', as_text=False)
+        tf.train.write_graph(sess.graph_def, './outputs/checkpoints/' + dataset, 'cyclegan_tf_' + dataset+ '.pb', as_text=False)
+        print('./outputs/checkpoints/' + dataset, 'cyclegan_tf_' + dataset+ '.pb')
     except:
+        print('./outputs/checkpoints/' + dataset, 'cyclegan_tf_' + dataset+ '.pb')
         raise Exception('No checkpoint!')
 
     # test

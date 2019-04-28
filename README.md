@@ -36,7 +36,7 @@ source activate cyclegan_tf1
 sh ./download_dataset.sh monet2photo
 ```
 
-## 2.4 Exit Compute Node, and back to log-in-node
+## 2.4 Exit Compute Node, and Back to log-in-node
 ```bash
 exit
 ```
@@ -48,40 +48,52 @@ qsub train_cyclegan_tf
 ```
 The training will take more than 48 hours. The max walltime for training on DevCloud is 24 hours, you will have to resubmit your training job after 24 hours. 
 
-You can use qstat command to check the status of your training job.
+You can use qstat command to check the status of your training job and find the JOB ID.
+
+For output logs, use qpeek:
+```
+qpeek -o <JOB_ID>
+```
 
 Also you can check your checkpoint files in train/outputs/checkpoints/monet2photo
 
+
+# 3. Port Checkpoints to Tensorflowjs Models
+
 Please do following steps after the training finishes (200 epoches by default).
 
-## 2.6 Download checkpoints from DevCloud
+## 3.1 Download checkpoints from DevCloud
 Execute following command in a terminal running on your own laptop, I mean not in the terminal connecting to AI DevCloud.
 ```
-[myname@myhomecomputer ~] scp -r colfax:/home/uxxxxx/train/outputs ~/cyclegan_tfjs/train
+[myname@myhomecomputer ~] scp -r colfax:cyclegan_tfjs/train/outputs ~/cyclegan_tfjs/train
 ```
+## 3.2 Port Checkpoints to Tensorflowjs Models
+setup the environment for this:
 
-# 3. Inference
-
-## 3.1 Install tensorflowjs
 ```
-pip install tensorflowjs==0.8.0
+cd ~/cyclegan_tfjs/inference
+conda env create -f environment.yml
+source activate tfjs
 ```
 
 ## 3.2 Convert models
 ```
-cd ~/cyclegan_tfjs/inference
-sh ./generate_model.sh
+bash generate_model.sh
 ```
 
-## 3.3 Run inference
-```
+There are actually three substeps:
+* Generate graph from checkpoints
+* Freeze graph
+* convert freezed graph to tfjs models with tfjs_converter
+
+# 4 Inference
+
+``` bash
 cd ~/cyclegan_tfjs/inference/tfjs
-
-sudo npm install http-server -g
-
-sudo http-server
-
-http://127.0.0.1:8080
-
+python -m http.server
 ```
+
+And go to:
+https://localhost::8000
+
 

@@ -5,10 +5,10 @@ cd ../inference
 
 ## freeze graph
 cd tools
-./freeze_graph.sh
+bash freeze_graph.sh
 
 ## convert model
-./convert_model.sh
+bash convert_model.sh
 cd ..
 
  
