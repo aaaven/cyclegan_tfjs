@@ -1,15 +1,14 @@
 # 1. Git Clone
 ```
-cd ~
-git clone https://github.com/caohuiyan/cyclegan_tfjs
-chmod 777 -R cyclegan_tfjs
+cd some_path_you_like
+git clone https://github.com/aaaven/cyclegan_tfjs.git
 ```
 
 # 2. Train on Intel AI DevCloud
 
 ## 2.1 Upload training code
 ```
-scp -r ~/cyclegan_tfjs/train colfax:/home/uxxxxx
+scp -r cyclegan_tfjs/train colfax
 ```
 
 ## 2.2 Login Intel AI DevCloud
